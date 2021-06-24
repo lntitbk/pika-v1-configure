@@ -1,0 +1,25 @@
+server:
+  port: 5553
+spring:
+  application: 
+    name: pika-v1-gateway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:5551/eureka/
+  instance:
+    prefer-ip-address: true
+zuul:
+  prefix: /api/v1
+  routes:
+    pika-v1-customer:
+      path: /customer/**
+      serviceId: pika-v1-customer
+    pika-v1-auth:
+      path: /auth/**
+      serviceId: pika-v1-auth
+  host:
+    connect-timeout-millis: 200000
+    socket-timeout-millis: 200000
+  thread-pool:
+    use-separate-thread-pools: true
