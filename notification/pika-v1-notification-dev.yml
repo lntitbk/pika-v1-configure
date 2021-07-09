@@ -22,4 +22,4 @@ server:
   port: 5556
 spring:
   application: 
-    name: pika-v1-auth
+    name: pika-v1-notification
