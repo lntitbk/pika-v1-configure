@@ -18,7 +18,7 @@ zuul:
     pika-v1-auth:
       path: /auth/**
       serviceId: pika-v1-auth
-    pika-v1-auth:
+    pika-v1-websocket:
       path: /websocket/**
       serviceId: pika-v1-websocket
   host:
