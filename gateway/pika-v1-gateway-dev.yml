@@ -18,6 +18,9 @@ zuul:
     pika-v1-auth:
       path: /auth/**
       serviceId: pika-v1-auth
+    pika-v1-auth:
+      path: /websocket/**
+      serviceId: pika-v1-websocket
   host:
     connect-timeout-millis: 200000
     socket-timeout-millis: 200000
