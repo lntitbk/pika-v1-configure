@@ -12,6 +12,9 @@ eureka:
 zuul:
   prefix: /api/v1
   routes:
+    pika-v1-oauth2:
+      path: /oauth/**
+      serviceId: pika-v1-oauth2
     pika-v1-customer:
       path: /customer/**
       serviceId: pika-v1-customer
@@ -21,6 +24,15 @@ zuul:
     pika-v1-websocket:
       path: /websocket/**
       serviceId: pika-v1-websocket
+  security:
+    oauth2:
+      client:
+        client-id :
+        client-secret:
+      resource:
+        id :
+        token-info-uri:
+        user-info-uri:
   host:
     connect-timeout-millis: 200000
     socket-timeout-millis: 200000
