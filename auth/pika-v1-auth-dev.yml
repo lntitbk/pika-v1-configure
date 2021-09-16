@@ -11,7 +11,9 @@ spring.jpa.database: MYSQL
 spring.datasource.platform: mysql
 spring.datasource.tomcat.initSQL: SET NAMES 'utf8mb4'
 spring.jpa.hibernate.ddl-auto: validate
-
+# flyway
+flyway:
+  baselineOnMigrate: true
 # Eureka
 eureka:
   instance:
