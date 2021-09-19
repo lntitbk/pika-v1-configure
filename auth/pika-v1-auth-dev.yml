@@ -2,7 +2,7 @@ server:
   port: 5554
 ## App Version
 app:
-  version: ^project.version^
+  version: ${project.version}
 spring:
   application: 
     name: pika-v1-auth
