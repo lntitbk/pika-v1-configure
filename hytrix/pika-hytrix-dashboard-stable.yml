@@ -1,0 +1,15 @@
+server:
+  port: 5555
+spring:
+  application: 
+    name: pika-hytrix-dashboard
+# Eureka
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:5551/eureka/
+

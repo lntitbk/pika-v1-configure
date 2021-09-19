@@ -19,7 +19,7 @@ zuul:
       path: /customer/**
       serviceId: pika-v1-customer
     pika-v1-auth:
-      path: /auth/**
+      path: /uaa/**
       serviceId: pika-v1-auth
     pika-v1-websocket:
       path: /websocket/**

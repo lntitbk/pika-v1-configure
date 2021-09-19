@@ -1,8 +1,15 @@
+server:
+  port: 5554
+## App Version
+app:
+  version: @project.version@
 spring:
   application: 
     name: pika-v1-auth
   profiles:
     active: dev
+  zipkin:
+    base-url: http://127.0.0.1:9411/
   datasource:
     url: jdbc:mysql://localhost:3306/pika_auth?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false&zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8&useUnicode=yes
     username: root
@@ -43,6 +50,5 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:5551/eureka/
-server:
-  port: 5554
+
 
