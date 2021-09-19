@@ -24,15 +24,15 @@ zuul:
     pika-v1-websocket:
       path: /websocket/**
       serviceId: pika-v1-websocket
-  security:
-    oauth2:
-      client:
-        client-id :
-        client-secret:
-      resource:
-        id :
-        token-info-uri:
-        user-info-uri:
+  # security:
+  #   oauth2:
+  #     client:
+  #       client-id :
+  #       client-secret:
+  #     resource:
+  #       id :
+  #       token-info-uri:
+  #       user-info-uri:
   host:
     connect-timeout-millis: 200000
     socket-timeout-millis: 200000
