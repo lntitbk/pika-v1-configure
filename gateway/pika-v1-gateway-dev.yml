@@ -21,7 +21,7 @@ zuul:
       filters:
         name: CircuitBreaker
           args:
-            name: pika-v1-auth
+            name: pika-v1-customer
             fallbackuri: forward:/customerServiceFallBack
     pika-v1-auth:
       path: /uaa/**
@@ -56,3 +56,9 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 4000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
