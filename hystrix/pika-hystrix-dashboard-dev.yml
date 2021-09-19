@@ -2,7 +2,7 @@ server:
   port: 5557
 spring:
   application: 
-    name: pika-hytrix-dashboard
+    name: pika-hystrix-dashboard
     
 #hystrix
 hystrix:
@@ -17,4 +17,3 @@ eureka:
     fetch-registry: true
     serviceUrl:
       defaultZone: http://localhost:5551/eureka/
-
