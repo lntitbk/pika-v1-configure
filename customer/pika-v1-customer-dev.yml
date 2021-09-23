@@ -27,5 +27,7 @@ eureka:
   instance:
     prefer-ip-address: true
   client:
+    registerWithEureka: true
+    fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:5551/eureka/
