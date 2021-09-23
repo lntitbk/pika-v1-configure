@@ -41,10 +41,10 @@ zuul:
 
 hystrix:
   command:
-    # pika-v1-auth:
-    #   execution:
-    #     timeout:
-    #       enabled: false
+    pika-v1-auth:
+      execution:
+        timeout:
+          enabled: false
     default:
       execution:
         timeout:
@@ -53,9 +53,6 @@ hystrix:
           strategy: THREAD
           thread:
             timeoutInMilliseconds: 200000
-  threadpool:
-    default:
-      maximumSize: 200
   threadpool:
     default:
       maximumSize: 200
