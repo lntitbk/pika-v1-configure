@@ -56,3 +56,9 @@ hystrix:
   threadpool:
     default:
       maximumSize: 200
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
