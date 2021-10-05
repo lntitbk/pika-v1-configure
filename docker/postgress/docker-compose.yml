@@ -1,0 +1,15 @@
+version: '3'
+services:
+   db:
+     image: "postgres"
+     container_name: "postgres"
+     environment:
+       - POSTGRES_USER=incomlend_backend
+       - POSTGRES_PASSWORD=incomlend_backend
+       - POSTGRES_DB=incomlend_backend
+     ports:
+       - "5432:5432"
+    #  volumes:
+      #  - ./data/postgres-data:/var/lib/postgresql/data
+# volumes:
+#   - pgdata : "./data/postgres-data"
