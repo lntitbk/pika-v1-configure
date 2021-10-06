@@ -22,6 +22,7 @@ zuul:
     pika-v1-auth:
       path: /uaa/**
       serviceId: pika-v1-auth
+      sensitiveHeaders: Cookie,Set-Cookie,Authorization
     pika-v1-websocket:
       path: /websocket/**
       serviceId: pika-v1-websocket
