@@ -1,0 +1,65 @@
+server:
+  port: 5553
+spring:
+  application: 
+    name: pika-v1-gateway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:5551/eureka/
+  instance:
+    prefer-ip-address: true
+zuul:
+  prefix: /api/v1
+  routes:
+    pika-v1-oauth2:
+      path: /oauth/**
+      serviceId: pika-v1-oauth2
+    pika-v1-customer:
+      path: /customer/**
+      serviceId: pika-v1-customer
+      sensitiveHeaders: Cookie,Set-Cookie,Authorization
+    pika-v1-auth:
+      path: /uaa/**
+      serviceId: pika-v1-auth
+    pika-v1-websocket:
+      path: /websocket/**
+      serviceId: pika-v1-websocket
+  # security:
+  #   oauth2:
+  #     client:
+  #       client-id :
+  #       client-secret:
+  #     resource:
+  #       id :
+  #       token-info-uri:
+  #       user-info-uri:
+  host:
+    connect-timeout-millis: 200000
+    socket-timeout-millis: 200000
+  thread-pool:
+    use-separate-thread-pools: true
+
+hystrix:
+  command:
+    pika-v1-auth:
+      execution:
+        timeout:
+          enabled: false
+    default:
+      execution:
+        timeout:
+          enabled: false
+        isolation:
+          strategy: THREAD
+          thread:
+            timeoutInMilliseconds: 200000
+  threadpool:
+    default:
+      maximumSize: 200
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
