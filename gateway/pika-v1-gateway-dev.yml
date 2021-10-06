@@ -10,6 +10,8 @@ eureka:
   instance:
     prefer-ip-address: true
 zuul:
+  sensitive-headers:
+  - Cookie, Authorization
   prefix: /api/v1
   routes:
     pika-v1-oauth2:
