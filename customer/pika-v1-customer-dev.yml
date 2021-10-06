@@ -25,6 +25,17 @@ spring:
     server:
       port: 7000
       transport: tcp
+
+security:
+  oauth2:
+    client:
+      client-id : trinh
+      client-secret: trinh
+    resource:
+      # id :
+      token-info-uri: http://localhost:5553/api/v1/uaa/oauth/check_token
+      # user-info-uri:
+
 # Eureka
 eureka:
   instance:
