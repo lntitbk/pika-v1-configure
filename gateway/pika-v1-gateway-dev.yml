@@ -15,12 +15,15 @@ zuul:
     pika-v1-oauth2:
       path: /oauth/**
       serviceId: pika-v1-oauth2
+      sensitiveHeaders: Cookie,Set-Cookie,Authorization
     pika-v1-customer:
       path: /customer/**
       serviceId: pika-v1-customer
+      sensitiveHeaders: Cookie,Set-Cookie,Authorization
     pika-v1-auth:
       path: /uaa/**
       serviceId: pika-v1-auth
+      sensitiveHeaders: Cookie,Set-Cookie,Authorization
     pika-v1-websocket:
       path: /websocket/**
       serviceId: pika-v1-websocket
