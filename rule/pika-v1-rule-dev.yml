@@ -1,0 +1,19 @@
+server:
+  port: 5560
+spring:
+  application: 
+    name: pika-v1-rule
+  profiles:
+    active: dev
+  zipkin:
+    base-url: http://127.0.0.1:9411/
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:5551/eureka/
+
+

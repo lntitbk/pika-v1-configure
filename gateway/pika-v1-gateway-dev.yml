@@ -26,6 +26,12 @@ zuul:
     pika-v1-websocket:
       path: /websocket/**
       serviceId: pika-v1-websocket
+    pika-v1-order:
+      path: /order/**
+      serviceId: pika-v1-order
+    pika-v1-rule:
+      path: /rule/**
+      serviceId: pika-v1-rule
   # security:
   #   oauth2:
   #     client:
